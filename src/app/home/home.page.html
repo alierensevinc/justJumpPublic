@@ -1,0 +1,17 @@
+<ion-content>
+    <div class="container">
+        <div class="title">
+            <h1 *ngIf="highScore">High Score : {{highScore}}</h1>
+            <h1 *ngIf="hasFailedOnce">Score : {{score}}</h1>
+            <h1 *ngIf="!gameRunning">{{titleText}}</h1>
+            <ion-button (click)="startGame()" *ngIf="!gameRunning" color="warning"
+                        mode="ios">{{gameButtonText}}</ion-button>
+        </div>
+        <div (click)="jump()" *ngIf="gameRunning" class="game">
+            <div></div>
+            <div [ngClass]="onJump ? 'jump' : ''" id="player"></div>
+            <div *ngIf="showObstacle" id="obstacle"></div>
+            <div *ngIf="showAirObstacle" id="airObstacle"></div>
+        </div>
+    </div>
+</ion-content>

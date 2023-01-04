@@ -1,0 +1,7 @@
+{
+  "name": "justJump",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}
